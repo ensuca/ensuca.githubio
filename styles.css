@@ -190,3 +190,8 @@ form .btn2 {
     margin-top: 16px;
 }
 
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
