@@ -1,0 +1,192 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background: #111;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+}
+
+/* Intro Section styling */
+#intro {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#intro h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+#intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #fff;
+    background: #333;
+    border: 2px solid #fff;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Section styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.experience-item, .project-item {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Contact Section styling */
+#contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #111;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Language toggle button */
+#lang-toggle {
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#lang-toggle:hover {
+    background-color: #555;
+}
+
+/* Form and input field styling */
+form input, form textarea {
+    width: 100%; 
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin-bottom: 15px; 
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    display: block; 
+}
+
+/* Styling for both Send and Download CV buttons */
+.btn2, .btn3 {
+    padding: 14px 60px;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    color: black !important; 
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* Add a border to the Download CV button */
+.btn3 {
+    border: 2px solid #333;
+}
+
+
+.btn3:hover {
+    background-color: #fff !important; 
+    color: black !important; 
+    border: 2px solid #333;
+}
+
+/* Add space between Send and Download CV button */
+#download-cv {
+    margin-top: 10px; 
+}
+
+/* Adjust spacing in the form */
+form .btn2 {
+    margin-bottom: 20px;
+}
+
+#cv-language-note {
+    margin-top: 16px;
+}
+
