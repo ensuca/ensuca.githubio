@@ -346,4 +346,55 @@ form .btn2 {
         font-size: 1rem;
         bottom: 15px;
     }
+
+    /* Mobile navigation improvements */
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav ul {
+        padding: 5px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 3px 5px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+        padding: 5px 8px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    /* Adjust intro section for mobile */
+    #intro {
+        padding: 60px 15px;
+    }
+
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+
+    #intro h2 {
+        font-size: 1.3rem;
+    }
+
+    #intro p {
+        font-size: 1rem;
+    }
+
+    /* Adjust section headings for mobile */
+    section {
+        padding: 40px 15px;
+    }
+
+    section h3 {
+        font-size: 1.5rem;
+    }
 }
