@@ -131,6 +131,7 @@ footer p {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    z-index: 1000;
 }
 
 #lang-toggle:hover {
@@ -194,4 +195,155 @@ form .btn2 {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* Certificate Grid styling */
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Certificate Item styling */
+.certificate-item {
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+    border-color: #555;
+}
+
+.certificate-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.certificate-item:hover img {
+    opacity: 0.9;
+}
+
+.certificate-item p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+/* Responsive adjustments for certificates */
+@media (max-width: 768px) {
+    .certificate-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .certificate-item {
+        padding: 15px;
+    }
+}
+
+/* Clickable certificate cursor */
+.certificate-clickable {
+    cursor: pointer;
+}
+
+/* Modal/Lightbox styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from { transform: translate(-50%, -50%) scale(0.5); }
+    to { transform: translate(-50%, -50%) scale(1); }
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+}
+
+/* Responsive modal adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+
+    .close {
+        top: 15px;
+        right: 25px;
+        font-size: 35px;
+    }
+
+    #caption {
+        font-size: 1rem;
+        bottom: 15px;
+    }
 }
