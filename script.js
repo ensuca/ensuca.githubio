@@ -1,3 +1,27 @@
+// Initialize default language on page load
+function initializeLanguage() {
+    const elements = document.querySelectorAll('[data-en]');
+
+    elements.forEach(el => {
+        const englishText = el.getAttribute('data-en');
+        if (englishText) {
+            el.textContent = englishText;
+        }
+    });
+
+    // Set default CV link
+    const downloadButton = document.getElementById('download-cv');
+    if (downloadButton) {
+        downloadButton.setAttribute('href', "https://github.com/ensuca/ensuca.githubio/raw/main/Enes-Uca-CV-EN.pdf");
+    }
+
+    // Set button text
+    const langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+        langToggle.textContent = 'Türkçe';
+    }
+}
+
 // Language toggle function
 function toggleLanguage() {
     const elements = document.querySelectorAll('[data-en], [data-tr]');
@@ -20,12 +44,15 @@ function toggleLanguage() {
 
     if (isEnglish) {
         downloadButton.setAttribute('href', "https://github.com/ensuca/ensuca.githubio/raw/main/Enes-Uca-CV-TR.pdf");
-        cvLanguageNote.style.display = 'none';
+        if (cvLanguageNote) cvLanguageNote.style.display = 'none';
     } else {
         downloadButton.setAttribute('href', "https://github.com/ensuca/ensuca.githubio/raw/main/Enes-Uca-CV-EN.pdf");
-        cvLanguageNote.style.display = 'block';
+        if (cvLanguageNote) cvLanguageNote.style.display = 'block';
     }
 }
+
+// Run initialization when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeLanguage);
 
 // Certificate modal functions
 function openModal(src, caption) {
